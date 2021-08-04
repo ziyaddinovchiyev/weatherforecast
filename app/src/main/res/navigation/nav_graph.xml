@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/forecastListFragment">
+
+    <fragment
+        android:id="@+id/forecastListFragment"
+        android:label="Forecast of nextt 7 days"
+        android:name="com.configcar.weatherforecast.ui.forecastlist.view.ForecastListFragment"
+        tools:layout="@layout/forecast_list_fragment">
+        <action
+            android:id="@+id/action_forecastListFragment_to_forecastDayFragment"
+            app:destination="@id/forecastDayFragment"
+            app:enterAnim="@anim/right_in"
+            app:exitAnim="@anim/left_out"
+            app:popEnterAnim="@anim/left_in"
+            app:popExitAnim="@anim/right_out"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/forecastDayFragment"
+        android:label="Forecast"
+        android:name="com.configcar.weatherforecast.ui.forecastday.ForecastDayFragment"
+        tools:layout="@layout/forecast_day_fragment">
+
+        <argument
+            android:name="forecast"
+            app:argType="com.configcar.weatherforecast.data.model.Forecast"/>
+    </fragment>
+
+</navigation>

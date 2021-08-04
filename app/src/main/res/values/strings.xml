@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Weather Forecast</string>
+    <string name="error_message">Retrieving weather information is failed. \n Swipe down to try again.</string>
+</resources>
